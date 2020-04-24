@@ -1,1 +1,1 @@
-angular.module("listaPersonagem",[]);
+angular.module("listaPersonagem", []);
