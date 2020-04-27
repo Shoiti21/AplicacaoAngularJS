@@ -23,8 +23,7 @@
     </div>
     <div class="jumbotron">
         <div class="card-deck">
-            <div class="card"
-                ng-repeat="personagem in personagens.results | filter:{name: searchFilterName} | orderBy:name:directionOrderBy">
+            <div class="card" ng-repeat="personagem in personagens.results | filter:{name: searchFilterName} | orderBy:name:directionOrderBy">
                 <img class="card-img-top" src="{{personagem.thumbnail.path}}.{{personagem.thumbnail.extension}}">
                 <div class="card-body">
                     <h5 class="card-title" ng-bind="personagem.name | uppercase"></h5>
@@ -36,7 +35,7 @@
             </div>
         </div>
         <div id="navPagination">
-            <nav aria-label="Page navigation">
+            <nav aria-label="Page navigation" ng-show="pages.length>1">
                 <ul class="pagination">
                     <li ng-class="buttonPrev">
                         <button class="page-link" aria-label="Previous"
